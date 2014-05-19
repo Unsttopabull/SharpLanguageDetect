@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{977BDAC0-B1E4-4198-A0AD-6B93E30EF480}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Frost.SharpLanguageDetect</RootNamespace>
+    <AssemblyName>Frost.SharpLanguageDetect</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Frost.SharpLanguageDetect.XML</DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdParty\JsonNET\Net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Detector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DetectorFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ILanguageDetector.cs" />
+    <Compile Include="JDK\CharacterSubset.cs" />
+    <Compile Include="JDK\GaussianRandom.cs" />
+    <Compile Include="JDK\UnicodeBlock.cs" />
+    <Compile Include="LangDetectException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Language.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Profiles\AfrikaansLangProfile.cs" />
+    <Compile Include="Profiles\ArabicLangProfile.cs" />
+    <Compile Include="Profiles\BulgarianLangProfile.cs" />
+    <Compile Include="Profiles\BengaliLangProfile.cs" />
+    <Compile Include="Profiles\CzechLangProfile.cs" />
+    <Compile Include="Profiles\DanishLangProfile.cs" />
+    <Compile Include="Profiles\GermanLangProfile.cs" />
+    <Compile Include="Profiles\GreekLangProfile.cs" />
+    <Compile Include="Profiles\EnglishLangProfile.cs" />
+    <Compile Include="Profiles\SpanishLangProfile.cs" />
+    <Compile Include="Profiles\EstonianLangProfile.cs" />
+    <Compile Include="Profiles\PersianLangProfile.cs" />
+    <Compile Include="Profiles\FinnishLangProfile.cs" />
+    <Compile Include="Profiles\FrenchLangProfile.cs" />
+    <Compile Include="Profiles\GujaratiLangProfile.cs" />
+    <Compile Include="Profiles\HebrewLangProfile.cs" />
+    <Compile Include="Profiles\HindiLangProfile.cs" />
+    <Compile Include="Profiles\CroatianLangProfile.cs" />
+    <Compile Include="Profiles\HungarianLangProfile.cs" />
+    <Compile Include="Profiles\IndonesianLangProfile.cs" />
+    <Compile Include="Profiles\ItalianLangProfile.cs" />
+    <Compile Include="Profiles\JapaneseLangProfile.cs" />
+    <Compile Include="Profiles\KannadaLangProfile.cs" />
+    <Compile Include="Profiles\KoreanLangProfile.cs" />
+    <Compile Include="Profiles\LithuanianLangProfile.cs" />
+    <Compile Include="Profiles\LatvianLangProfile.cs" />
+    <Compile Include="Profiles\MacedonianLangProfile.cs" />
+    <Compile Include="Profiles\MalayalamLangProfile.cs" />
+    <Compile Include="Profiles\MarathiLangProfile.cs" />
+    <Compile Include="Profiles\NepaliLangProfile.cs" />
+    <Compile Include="Profiles\DutchLangProfile.cs" />
+    <Compile Include="Profiles\NorwegianLangProfile.cs" />
+    <Compile Include="Profiles\PunjabiLangProfile.cs" />
+    <Compile Include="Profiles\PolishLangProfile.cs" />
+    <Compile Include="Profiles\PortugueseLangProfile.cs" />
+    <Compile Include="Profiles\RomanianLangProfile.cs" />
+    <Compile Include="Profiles\RussianLangProfile.cs" />
+    <Compile Include="Profiles\SlovakLangProfile.cs" />
+    <Compile Include="Profiles\SloveneLangProfile.cs" />
+    <Compile Include="Profiles\SomaliLangProfile.cs" />
+    <Compile Include="Profiles\AlbanianLangProfile.cs" />
+    <Compile Include="Profiles\SerbianLangProfile.cs" />
+    <Compile Include="Profiles\SwedishLangProfile.cs" />
+    <Compile Include="Profiles\SwahiliLangProfile.cs" />
+    <Compile Include="Profiles\TamilLangProfile.cs" />
+    <Compile Include="Profiles\TeluguLangProfile.cs" />
+    <Compile Include="Profiles\ThaiLangProfile.cs" />
+    <Compile Include="Profiles\TagalogLangProfile.cs" />
+    <Compile Include="Profiles\TurkishLangProfile.cs" />
+    <Compile Include="Profiles\UkrainianLangProfile.cs" />
+    <Compile Include="Profiles\UrduLangProfile.cs" />
+    <Compile Include="Profiles\VietnameseLangProfile.cs" />
+    <Compile Include="Profiles\SimplifiedChineseLangProfile.cs" />
+    <Compile Include="Profiles\TraditionalChineseLangProfile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Util\ILanguageProfile.cs" />
+    <Compile Include="Util\LangProfile.cs" />
+    <Compile Include="Util\NGram.cs" />
+    <Compile Include="Util\TagExtractor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LanguageProfiles\af" />
+    <None Include="LanguageProfiles\ar" />
+    <None Include="LanguageProfiles\bg" />
+    <None Include="LanguageProfiles\bn" />
+    <None Include="LanguageProfiles\cs" />
+    <None Include="LanguageProfiles\da" />
+    <None Include="LanguageProfiles\de" />
+    <None Include="LanguageProfiles\el" />
+    <None Include="LanguageProfiles\en" />
+    <None Include="LanguageProfiles\es" />
+    <None Include="LanguageProfiles\et" />
+    <None Include="LanguageProfiles\fa" />
+    <None Include="LanguageProfiles\fi" />
+    <None Include="LanguageProfiles\fr" />
+    <None Include="LanguageProfiles\gu" />
+    <None Include="LanguageProfiles\he" />
+    <None Include="LanguageProfiles\hi" />
+    <None Include="LanguageProfiles\hr" />
+    <None Include="LanguageProfiles\hu" />
+    <None Include="LanguageProfiles\id" />
+    <None Include="LanguageProfiles\it" />
+    <None Include="LanguageProfiles\ja" />
+    <None Include="LanguageProfiles\kn" />
+    <None Include="LanguageProfiles\ko" />
+    <None Include="LanguageProfiles\lt" />
+    <None Include="LanguageProfiles\lv" />
+    <None Include="LanguageProfiles\mk" />
+    <None Include="LanguageProfiles\ml" />
+    <None Include="LanguageProfiles\mr" />
+    <None Include="LanguageProfiles\ne" />
+    <None Include="LanguageProfiles\nl" />
+    <None Include="LanguageProfiles\no" />
+    <None Include="LanguageProfiles\pa" />
+    <None Include="LanguageProfiles\pl" />
+    <None Include="LanguageProfiles\pt" />
+    <None Include="LanguageProfiles\ro" />
+    <None Include="LanguageProfiles\ru" />
+    <None Include="LanguageProfiles\sk" />
+    <None Include="LanguageProfiles\sl" />
+    <None Include="LanguageProfiles\so" />
+    <None Include="LanguageProfiles\sq" />
+    <None Include="LanguageProfiles\sr" />
+    <None Include="LanguageProfiles\sv" />
+    <None Include="LanguageProfiles\sw" />
+    <None Include="LanguageProfiles\ta" />
+    <None Include="LanguageProfiles\te" />
+    <None Include="LanguageProfiles\th" />
+    <None Include="LanguageProfiles\tl" />
+    <None Include="LanguageProfiles\tr" />
+    <None Include="LanguageProfiles\uk" />
+    <None Include="LanguageProfiles\ur" />
+    <None Include="LanguageProfiles\vi" />
+    <None Include="LanguageProfiles\zh-cn" />
+    <None Include="LanguageProfiles\zh-tw" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
